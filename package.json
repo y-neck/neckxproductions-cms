@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@storyblok/nuxt": "^6.0.13",
     "@tailwindcss/typography": "^0.5.15",
     "nuxt": "^3.13.2",
     "vue": "latest",

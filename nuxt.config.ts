@@ -9,4 +9,10 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  modules: [['@storyblok/nuxt', { accessToken: process.env.STORYBLOK_KEY }]],
+  runtimeConfig: {
+    public: {
+      storyblok_version: process.env.STORYBLOK_VERSION,
+    },
+  },
 });
