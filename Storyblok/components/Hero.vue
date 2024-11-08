@@ -1,6 +1,12 @@
 <template>
   <section v-editable="blok">
-    <img class="w-full" :src="blok.image.filename" :alt="blok.image.alt" />
+    <img
+      v-if="heroImg"
+      class="aspect-auto object-cover w-full max-h-[400px]"
+      :src="`${heroImg.filename}/m/smart`"
+      :alt="heroImg.alt"
+      :title="heroImg.title"
+    />
   </section>
 </template>
 
@@ -8,4 +14,7 @@
 const props = defineProps({
   blok: { required: true, type: Object },
 });
+// Attempt to extract heroImg safely
+const heroImg = props.blok?.body?.[0]?.heroImg;
+console.log('Hero.vue: ', heroImg); // This is where the issue might lie if heroImg is not being found
 </script>
