@@ -3,8 +3,17 @@
 @tailwind utilities;
 
 @layer base {
-    html{
+    html {
         @apply bg-background;
         @apply text-primary;
+    }
+
+    main {
+        @apply flex;
+        @apply flex-col;
+        @apply justify-center;
+        @apply gap-8;
+        @apply w-full;
+        @apply bg-background;
     }
 }
