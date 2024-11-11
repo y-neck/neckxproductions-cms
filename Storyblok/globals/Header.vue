@@ -20,7 +20,7 @@
         ]"
         :key="index"
         :to="url"
-        class="fontSize-h2 text-decoration-none hover:underline hover:decoration-accent transition ease-in-out duration-300"
+        class="fontSize-md text-decoration-none hover:underline hover:decoration-accent transition ease-in-out duration-300"
         :aria-label="navItem"
       >
         {{ navItem }}

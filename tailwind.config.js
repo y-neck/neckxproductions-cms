@@ -27,37 +27,38 @@ export default {
     fontFamily: {
       sans: ['Open Sans', 'sans-serif'],
     },
-
-  },
-  extend: {	/* Extend default css values */
     fontSize: {
-      'p': ['1rem', {
+      'base': ['1rem', {
         lineHeight: '1.5rem',
         letterSpacing: '0rem',
         fontWeight: '400',
       }],
-      'h3': ['1.4rem', {
+      'sm': ['1.4rem', {
         lineHeight: 'auto',
         letterSpacing: '0rem',
         fontWeight: '400',
       }],
-      'h2': ['1.75rem', {
+      'md': ['1.75rem', {
         lineHeight: 'auto',
         letterSpacing: '0rem',
         fontWeight: '400',
       }],
-      'h1': ['2rem', {
+      'lg': ['2rem', {
         lineHeight: 'auto',
         letterSpacing: '0rem',
         fontWeight: '400',
       }],
-      'sectionTitle': ['2rem', {
+      'xl': ['[2.25rem]', {
         lineHeight: 'auto',
         letterSpacing: '0.04rem',
         fontWeight: '700',
         fontStyle: 'italic',
       }]
     },
+
+  },
+  extend: {	/* Extend default css values */
+
     prefix: 'tw-', /* PostCSS: Add prefix for tailwind classes */
   },
   plugins: [require('@tailwindcss/typography')],

@@ -6,6 +6,7 @@
     html {
         @apply bg-background;
         @apply text-primary;
+        @apply text-base;
     }
 
     main {
@@ -15,9 +16,32 @@
         @apply w-full;
         @apply bg-background;
         @apply z-10;
+        @apply mx-16;
     }
 
     main> :not(header):not(footer):not(#header-xIcon-Container) {
         @apply gap-8;
+    }
+
+    .sectionTitle {
+        @apply uppercase;
+        @apply break-words;
+        @apply font-normal;
+        @apply leading-none;
+        @apply tracking-wide;
+        @apply font-bold;
+        @apply italic;
+    }
+
+    .sectionTitle_outline {
+        @apply font-normal;
+        @apply leading-none;
+        @apply tracking-wide;
+        @apply font-bold;
+        @apply italic;
+
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px;
+        -webkit-text-stroke-color: #eee;
     }
 }
