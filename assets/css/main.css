@@ -16,7 +16,7 @@
         @apply w-full;
         @apply bg-background;
         @apply z-10;
-        @apply mx-16;
+        @apply px-16;
     }
 
     main> :not(header):not(footer):not(#header-xIcon-Container) {
