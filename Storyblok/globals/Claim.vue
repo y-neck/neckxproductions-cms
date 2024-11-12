@@ -1,12 +1,16 @@
 <template>
-  <div v-editable="blok" class="flex flex-col">
-    <span
-      v-if="claimOutline"
-      class="sectionTitle sectionTitle_outline text-xl"
-      >{{ claimOutline }}</span
-    >
-    <span v-if="claimText" class="sectionTitle text-xl">{{ claimText }}</span>
-  </div>
+  <section>
+    <div v-editable="blok" class="flex flex-col gap-2">
+      <span
+        v-if="claimOutline"
+        class="sectionTitle sectionTitle_outline text-md font-bold"
+        >{{ claimOutline }}</span
+      >
+      <span v-if="claimText" class="sectionTitle text-md font-bold">{{
+        claimText
+      }}</span>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">

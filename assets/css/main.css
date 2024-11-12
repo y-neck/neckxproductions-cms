@@ -9,9 +9,10 @@
         @apply text-base;
     }
 
-    main {
+    main> {
         @apply flex;
         @apply flex-col;
+        @apply gap-8;
         @apply justify-center;
         @apply w-full;
         @apply bg-background;
@@ -26,7 +27,7 @@
     .sectionTitle {
         @apply uppercase;
         @apply break-words;
-        @apply font-normal;
+        @apply font-bold;
         @apply leading-none;
         @apply tracking-wide;
         @apply font-bold;
@@ -34,7 +35,7 @@
     }
 
     .sectionTitle_outline {
-        @apply font-normal;
+        @apply font-bold;
         @apply leading-none;
         @apply tracking-wide;
         @apply font-bold;
@@ -43,5 +44,10 @@
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke: 1px;
         -webkit-text-stroke-color: #eee;
+    }
+
+    section {
+        @apply px-16;
+        @apply py-8;
     }
 }
