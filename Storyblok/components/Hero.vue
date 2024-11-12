@@ -1,5 +1,5 @@
 <template>
-  <section v-editable="blok">
+  <div v-editable="blok">
     <img
       v-if="heroImg"
       class="aspect-auto object-cover w-full max-h-[400px]"
@@ -7,7 +7,7 @@
       :alt="heroImg.alt"
       :title="heroImg.title"
     />
-  </section>
+  </div>
 </template>
 
 <script setup lang="ts">
