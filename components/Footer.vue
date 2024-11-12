@@ -19,6 +19,7 @@
         class="w-[335px] self-center pointer-events-none"
       />
       <a
+        href="mailto:yannick@neckXproductions.ch"
         id="company-email"
         target="_blank"
         rel="noopener noreferrer"
