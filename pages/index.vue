@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <pre>{{ story }}</pre> -->
+    <pre>{{ story }}</pre>
     <!-- Import first component -->
     <Hero
       v-if="story"
@@ -41,6 +41,7 @@ import Footer from '~/components/Footer.vue';
 const config = useRuntimeConfig();
 const story = await useAsyncStoryblok('home', {
   version: config.public.storyblok_version,
+  resolve_relations: 'ServiceSection.servicesRef',
 }); /* Fetch data from Storyblok */
 console.log(story.value);
 </script>
