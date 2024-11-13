@@ -64,7 +64,7 @@
 
     <div v-if="!isEven" class="service-container">
       <div
-        class="overflow-wrapperodd-style-service-container w-1/2 md-max:self-center max-h-[300px]"
+        class="overflow-wrapper odd-style-service-container w-1/2 md-max:self-center max-h-[300px]"
       >
         <img
           v-if="blok?.content.imgVideo?.filename?.includes('.webp')"
@@ -141,7 +141,7 @@ console.log('Service.vue: ', props.blok); // Check if `blok` data is available
   overflow: hidden;
 }
 
-#services_video_frame video {
+video {
   width: 100%;
   height: 100%;
   max-height: 300px;
@@ -153,6 +153,7 @@ console.log('Service.vue: ', props.blok); // Check if `blok` data is available
   width: 80%;
   position: relative;
   transform: skewX(-30deg);
+  height: 100%;
   margin-left: -60px;
 }
 
@@ -163,5 +164,6 @@ console.log('Service.vue: ', props.blok); // Check if `blok` data is available
   position: relative;
   transform-origin: left top;
   overflow: hidden;
+  pointer-events: none;
 }
 </style>
