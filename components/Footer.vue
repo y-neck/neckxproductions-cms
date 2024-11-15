@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="flex flex-col justify-center w-full sticky top-[100vh] <!-- force footer to end of page --> px-[3.75rem] py-[1.875rem] gap-[1.875rem] border-t border-primary bg-background"
+    class="flex flex-col justify-center w-full sticky top-[100vh] self-end px-[3.75rem] py-[1.875rem] gap-[1.875rem] border-t border-primary bg-background"
   >
     <h2
       id="footer_statement"
