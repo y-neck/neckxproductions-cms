@@ -29,18 +29,13 @@
               loading="lazy"
               class="h-full aspect-auto object-cover pointer-events-none"
             />
-
-            <iframe
-              v-else-if="isExternalVideo"
-              :src="`${blok?.content.imgVideo?.filename}?autoplay=1&controls=0&&showinfo=0&loop=1&mute=1`"
-              allow="autoplay"
-              loading="lazy"
-              width="100%"
-              height="300px"
-              :title="`${blok?.content.imgVideo?.title}`"
-              allowfullscreen
-            ></iframe
-            ><video
+            <div class="externalIframe" v-else-if="blok?.content.iframe">
+              <div
+                v-html="blok?.content.iframe"
+                class="translate-x-[36px]"
+              ></div>
+            </div>
+            <video
               v-else="isVideo"
               class="pointer-events-none w-full h-auto aspect-video object-cover"
               :alt="`${blok?.content.imgVideo?.alt}`"
@@ -69,16 +64,9 @@
           class="h-full aspect-auto object-cover pointer-events-none"
         />
 
-        <iframe
-          v-else-if="isExternalVideo"
-          :src="`${blok?.content.imgVideo?.filename}?autoplay=1&controls=0&&showinfo=0&loop=1&mute=1`"
-          allow="autoplay"
-          loading="lazy"
-          width="100%"
-          height="300px"
-          :title="`${blok?.content.imgVideo?.title}`"
-          allowfullscreen
-        ></iframe>
+        <div class="externalIframe" v-else-if="blok?.content.iframe">
+          <div v-html="blok?.content.iframe" class="translate-x-[-36px]"></div>
+        </div>
         <video
           v-else="isVideo"
           class="pointer-events-none w-full h-auto aspect-video object-cover"
