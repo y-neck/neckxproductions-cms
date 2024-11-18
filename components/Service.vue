@@ -23,7 +23,7 @@
         <div class="even-style-service-container self-center">
           <div class="skew-container flex">
             <img
-              v-if="blok?.content.imgVideo?.filename.includes('.webp')"
+              v-if="isImage"
               :src="`${blok?.content.imgVideo?.filename}/m/`"
               :alt="`${blok?.content.imgVideo?.alt}`"
               loading="lazy"
@@ -31,22 +31,17 @@
             />
 
             <iframe
-              v-else-if="
-                blok?.content.imgVideo?.filename.includes(
-                  'youtube' || 'youtu.be' || 'vimeo'
-                )
-              "
-              :src="`${blok?.content.imgVideo?.filename}`"
+              v-else-if="isExternalVideo"
+              :src="`${blok?.content.imgVideo?.filename}?autoplay=1&controls=0&&showinfo=0&loop=1&mute=1`"
               allow="autoplay"
               loading="lazy"
               width="100%"
               height="300px"
               :title="`${blok?.content.imgVideo?.title}`"
               allowfullscreen
-              class="pointer-events-none"
             ></iframe
             ><video
-              v-else="blok?.content.imgVideo?.filename?.includes('.webm')"
+              v-else="isVideo"
               class="pointer-events-none w-full h-auto aspect-video object-cover"
               :alt="`${blok?.content.imgVideo?.alt}`"
               height="300px"
@@ -67,12 +62,33 @@
         class="overflow-wrapper odd-style-service-container w-1/2 md-max:self-center max-h-[300px]"
       >
         <img
-          v-if="blok?.content.imgVideo?.filename?.includes('.webp')"
+          v-if="isImage"
           :src="`${blok?.content.imgVideo?.filename}/m/`"
           :alt="`${blok?.content.imgVideo?.alt}`"
           loading="lazy"
           class="h-full aspect-auto object-cover pointer-events-none"
         />
+
+        <iframe
+          v-else-if="isExternalVideo"
+          :src="`${blok?.content.imgVideo?.filename}?autoplay=1&controls=0&&showinfo=0&loop=1&mute=1`"
+          allow="autoplay"
+          loading="lazy"
+          width="100%"
+          height="300px"
+          :title="`${blok?.content.imgVideo?.title}`"
+          allowfullscreen
+        ></iframe>
+        <video
+          v-else="isVideo"
+          class="pointer-events-none w-full h-auto aspect-video object-cover"
+          :alt="`${blok?.content.imgVideo?.alt}`"
+          height="300px"
+          width="100%"
+          muted
+          autoplay
+          loop
+        ></video>
       </div>
       <div class="service_description lg:ml-[60px] lg:text-right lg:self-end">
         <h2 class="service-title">
@@ -81,7 +97,7 @@
           }}</span
           ><span class="sectionTitle">{{ blok?.content.serviceTitle }}</span>
         </h2>
-        <p class="service_description_text text-left">
+        <p class="service_description_text text-right">
           {{ blok?.content.serviceDescription }}
         </p>
       </div>
@@ -100,6 +116,19 @@ const props = defineProps({
 
 // Check if the index is even
 const isEven = computed(() => props.index % 2 === 0);
+
+// Content checks
+const isImage = computed(() =>
+  /\.(webp|jpg|png|jpeg)$/i.test(props.blok?.content.imgVideo?.filename)
+);
+// Check for video files hosted on Storyblok (e.g., .webm)
+const isVideo = computed(() =>
+  /\.(webm|mp4|mov)$/i.test(props.blok?.content.imgVideo?.filename)
+);
+// Check for external video links (e.g., YouTube, Vimeo)
+const isExternalVideo = computed(() =>
+  /(youtube|youtu\.be|vimeo)/i.test(props.blok?.content.imgVideo?.filename)
+);
 
 // Log the received props to ensure data is correct
 console.log('Service.vue: ', props.blok); // Check if `blok` data is available
