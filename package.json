@@ -13,6 +13,7 @@
     "@storyblok/nuxt": "^6.0.13",
     "@tailwindcss/typography": "^0.5.15",
     "nuxt": "^3.13.2",
+    "resend": "^4.0.1",
     "vue": "latest",
     "vue-router": "latest"
   },
