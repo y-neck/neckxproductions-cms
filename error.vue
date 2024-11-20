@@ -9,14 +9,14 @@
           {{ error?.statusCode }}
         </h1>
         <img
-          :src="`https://http.cat/${error.statusCode}`"
+          :src="`https://http.cat/${error?.statusCode}`"
           alt="`https.cat-${error.statusCode}`"
           class="w-1/4 max-h-[300px] fit aspect-auto"
         />
         <NuxtLink
           to="/"
           class="sectionTitle hover:underline hover:decoration-accent transition-all duration-300"
-          >Zurück zur Startseite</NuxtLink
+          >Ganz schnell zurück zur Startseite</NuxtLink
         >
       </section>
     </main>
