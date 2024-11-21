@@ -4,9 +4,6 @@
     <Header />
     <main>
       <StoryblokComponent v-if="story" :blok="story.content" />
-
-      <ProjectSectionGrid  />
-
       <section id="about-vision">
         <h2 id="about-vision-title" class="sectionTitle">
           <span class="sectionTitle_outline">Meine </span>
@@ -40,7 +37,6 @@
 
 <script setup lang="ts">
 import Header from '~/components/Header.vue';
-import ProjectSectionGrid from '~/storyblok/components/ProjectSectionGrid.vue';
 import Footer from '~/components/Footer.vue';
 
 const config = useRuntimeConfig();

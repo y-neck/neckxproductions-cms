@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-
   html,
   body {
     @apply bg-background;
@@ -23,7 +22,7 @@
     @apply px-16;
   }
 
-  main> :not(header):not(footer):not(#header-xIcon-Container) {
+  main > :not(header):not(footer):not(#header-xIcon-Container) {
     @apply gap-8;
   }
 
@@ -60,4 +59,8 @@
 
 footer {
   margin-top: auto;
+}
+
+img {
+  pointer-events: none;
 }
