@@ -8,7 +8,7 @@
     >
       <img
         id="about-img"
-        class="skew-x-[30deg] w-full h-full object-cover relative object-left-top overflow-hidden min-w-[40%]"
+        class="skew-x-[30deg] w-full h-full object-cover relative object-left-top overflow-hidden min-w-[40%] pl-16"
         v-if="sectionImage"
         :src="`${sectionImage?.filename}/m/smart`"
         :alt="sectionImage.alt"
