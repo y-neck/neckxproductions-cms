@@ -2,7 +2,7 @@
   <div>
     <!-- <pre>{{ story }}</pre> -->
     <Header />
-    <main>
+    <div>
       <StoryblokComponent v-if="story" :blok="story.content" />
       <section id="about-vision">
         <h2 id="about-vision-title" class="sectionTitle">
@@ -31,7 +31,7 @@
         </p>
       </section>
       <Footer />
-    </main>
+    </div>
   </div>
 </template>
 

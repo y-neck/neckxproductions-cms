@@ -1,6 +1,7 @@
 <template>
+  <h2 class="sectionTitle">Projekte</h2>
   <div class="grid-wrapper">
-    <section
+    <div
       id="project-grid"
       v-editable="blok"
       class="grid grid-cols-2 gap-x-8 gap-y-6 max-md:grid-cols-1"
@@ -13,7 +14,7 @@
         :index="index"
         role="gridcell"
       />
-    </section>
+    </div>
   </div>
 </template>
 
