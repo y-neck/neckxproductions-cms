@@ -4,7 +4,7 @@
     <Header />
     <div>
       <StoryblokComponent v-if="story" :blok="story.content" />
-      <section id="about-vision">
+      <section id="about-vision" class="px-16">
         <h2 id="about-vision-title" class="sectionTitle">
           <span class="sectionTitle_outline">Meine </span>
           <span>Vision</span>

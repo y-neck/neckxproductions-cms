@@ -29,13 +29,6 @@
   </header>
 </template>
 
-<script setup lang="ts">
-const props = defineProps({
-  blok: { required: true, type: Object },
-});
-// Attempt to extract heroImg safely
-const xIcon = props.blok?.body?.[0]?.xIcon;
-console.log('xIcon: ', xIcon); // This is where the issue might lie if heroImg is not being found
-</script>
+<script setup lang="ts"></script>
 
 <style scoped></style>

@@ -9,10 +9,19 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: [['@storyblok/nuxt', { accessToken: process.env.STORYBLOK_KEY }]],
+  modules: [
+    ['@storyblok/nuxt', { accessToken: process.env.STORYBLOK_KEY }],
+    'shadcn-nuxt',
+  ],
   runtimeConfig: {
     public: {
       storyblok_version: process.env.STORYBLOK_VERSION,
     },
+  },
+  shadcn: {
+    // Prefix for imported components
+    prefix: 'shadcn-',
+    // ShadCN directory
+    componentDir: './components/ui',
   },
 });
