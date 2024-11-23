@@ -1,6 +1,7 @@
 <template>
   <!-- <pre>{{ blok }}</pre> -->
-  <NuxtLink :to="`${blok?.content.slug}`">
+  <!-- <NuxtLink :to="`/projects/${blok?.slug}`"> -->
+  <NuxtLink :to="`${blok?.full_slug}`">
     <div class="project-card-container aspect-video">
       <div
         class="project-card card-tile h-full cursor-pointer relative overflow-scroll bg-accent border-2 border-primary rounded-lg"
@@ -22,16 +23,20 @@
 </template>
 
 <script setup lang="ts">
+import { ProjectCard } from '#build/components';
+
 const props = defineProps({
   blok: { required: true, type: Object },
   index: {
     required: true,
     type: Number,
   },
+  slug: String,
 });
 
-// Log the received props to ensure data is correct
+// DEBUG: Log the received props to ensure data is correct
 console.log('ProjectCard.vue: ', props.blok); // Check if `blok` data is available
+console.log('Resolved slug for ProjectCard.vue: ', props.blok.full_slug);
 </script>
 
 <style scoped></style>
