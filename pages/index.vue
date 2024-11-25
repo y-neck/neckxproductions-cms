@@ -1,6 +1,6 @@
 <template>
   <div>
-    <pre>{{ story }}</pre>
+    <!-- <pre>{{ story }}</pre> -->
     <!-- Import first component -->
     <Hero
       v-if="story"
@@ -28,6 +28,13 @@
         <Header />
       </div>
       <StoryblokComponent v-if="story" :blok="story.content" class="z-20" />
+      <section id="contact" class="flex flex-col gap-8 mx-16">
+        <h2 class="sectionTitle">
+          <span class="sectionTitle_outline">Kon</span>
+          <span>takt</span>
+        </h2>
+        <ContactForm />
+      </section>
       <Footer />
     </div>
   </div>
@@ -36,6 +43,7 @@
 <script setup lang="ts">
 import Hero from '~/storyblok/components/Hero.vue';
 import Header from '~/components/Header.vue';
+import ContactForm from '~/components/ContactForm.vue';
 import Footer from '~/components/Footer.vue';
 
 const config = useRuntimeConfig();

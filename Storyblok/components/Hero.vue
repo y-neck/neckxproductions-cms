@@ -3,9 +3,9 @@
     <img
       v-if="heroImg"
       class="aspect-auto object-cover w-full max-h-[400px]"
-      :src="`${heroImg.filename}/m/smart`"
-      :alt="heroImg.alt"
-      :title="heroImg.title"
+      :src="`${heroImg?.filename}/m/smart`"
+      :alt="heroImg.alt || 'hero-img'"
+      :title="heroImg.title || 'hero-img'"
     />
   </div>
 </template>
@@ -16,5 +16,6 @@ const props = defineProps({
 });
 // Attempt to extract heroImg safely
 const heroImg = props.blok?.body?.[0]?.heroImg;
+
 console.log('Hero.vue: ', heroImg); // This is where the issue might lie if heroImg is not being found
 </script>

@@ -2,8 +2,8 @@
   <div v-editable="blok">
     <Header />
     <img
-      :src="`${blok?.projectImg?.filename}/m/smart`"
-      :alt="`${blok?.projectImg?.alt} || Project image`"
+      :src="`${blok?.content.projectImg?.filename}/m/smart`"
+      :alt="`${blok?.content.projectImg?.alt} || Project image`"
       loading="lazy"
       class="w-full h-[250px] aspect-video object-cover"
     />
@@ -13,9 +13,11 @@
         class="text-decoration-none hover:underline hover:decoration-accent"
         >← Zurück zur Projektübersicht</NuxtLink
       >
-      <h1 class="text-lg font-bold">{{ blok?.projectTitle }}</h1>
-      <div v-html="resolvedRichText" class="prose"></div>
-      <span>{{ resolvedReference }}</span>
+      <h1 class="text-lg font-bold" id="project-title">
+        {{ blok?.content.projectTitle }}
+      </h1>
+      <div>{{ blok?.content?.projectDescription }}</div>
+      <div>{{ blok?.content?.Reference }}</div>
     </main>
     <Footer />
   </div>
@@ -43,14 +45,10 @@ const story = await useAsyncStoryblok(`${slug}`, {
   version: config.public.storyblok_version,
 });
 
+// Resolve story to blok
 console.log(`${slug} story: `, story?.value);
 const blok = story?.value;
 console.log('blok: ', blok);
-
-const resolvedRichText = computed(() =>
-  renderRichText(blok?.projectDescription)
-);
-const resolvedReference = computed(() => renderRichText(blok?.Reference));
 </script>
 
 <style scoped></style>
