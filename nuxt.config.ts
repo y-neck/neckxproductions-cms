@@ -12,6 +12,7 @@ export default defineNuxtConfig({
   modules: [
     ['@storyblok/nuxt', { accessToken: process.env.STORYBLOK_KEY }],
     'shadcn-nuxt',
+    '@nuxtjs/mdc',
   ],
   runtimeConfig: {
     public: {
@@ -23,5 +24,10 @@ export default defineNuxtConfig({
     prefix: 'shadcn-',
     // ShadCN directory
     componentDir: './components/ui',
+  },
+  mdc: {
+    components: {
+      prose: true,
+    },
   },
 });

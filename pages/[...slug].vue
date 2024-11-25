@@ -7,17 +7,24 @@
       loading="lazy"
       class="w-full h-[250px] aspect-video object-cover"
     />
-    <main>
+    <main class="flex flex-col gap-8 my-8">
       <NuxtLink
         to="/project-overview"
         class="text-decoration-none hover:underline hover:decoration-accent"
         >← Zurück zur Projektübersicht</NuxtLink
       >
-      <h1 class="text-lg font-bold" id="project-title">
-        {{ blok?.content.projectTitle }}
-      </h1>
-      <div>{{ blok?.content?.projectDescription }}</div>
-      <div>{{ blok?.content?.Reference }}</div>
+      <article class="flex flex-col gap-8">
+        <h1 class="text-lg font-bold" id="project-title">
+          {{ blok?.content.projectTitle }}
+        </h1>
+        <MDC :value="blok?.content.projectDescription" tag="article" />
+        <div
+          v-if="blok?.content.mediaElement"
+          class="media-element-iframe aspect-video object-fit"
+          v-html="blok?.content.mediaElement"
+        ></div>
+        <MDC :value="blok?.content.Reference" />
+      </article>
     </main>
     <Footer />
   </div>
@@ -51,4 +58,15 @@ const blok = story?.value;
 console.log('blok: ', blok);
 </script>
 
-<style scoped></style>
+<style scoped>
+iframe {
+  @apply w-full h-auto aspect-video object-cover;
+}
+
+li {
+  @apply list-disc;
+}
+h2 {
+  @apply text-lg hover:underline decoration-accent;
+}
+</style>
