@@ -1,6 +1,7 @@
 <template>
   <div>
-    <!-- <pre>{{ story }}</pre> -->
+    <!--     <pre>{{ story }}</pre>
+ -->
     <Header />
     <div>
       <StoryblokComponent v-if="story" :blok="story.content" />
@@ -42,7 +43,10 @@ import Footer from '~/components/Footer.vue';
 const config = useRuntimeConfig();
 const story = await useAsyncStoryblok('about', {
   version: config.public.storyblok_version,
-  resolve_relations: 'ProjectSection.projectRef',
+  resolve_relations: [
+    'ProjectSection.projectRef',
+    'EducationSection.educationRef',
+  ],
 }); /* Fetch data from Storyblok */
 console.log(story.value);
 </script>
