@@ -211,6 +211,21 @@
 </template>
 
 <script setup lang="ts">
+useSeoMeta({
+  title: ' socials // neckXproductions',
+  ogTitle: '(A)soziale Plattformen' /* Title of page without branding */,
+  ogSiteName: 'neckXproductions' /* Overall site name */,
+  ogType: 'profile' /* 'website' | 'article' | 'book' | 'profile' */,
+  description:
+    'Auf diesen Plattformen darfst du gerne meine Projekte verfolgen!',
+  ogDescription:
+    'Auf diesen Plattformen darfst du gerne meine Projekte verfolgen!',
+  creator: '©neckXproductions',
+  robots: 'index, follow',
+  ogImage:
+    'https://a.storyblok.com/f/310287/1850x1668/d7b1985a56/x-icon.webp' /* Image of page when sharing */,
+}); /* https://nuxt.com/docs/api/composables/use-seo-meta */
+
 import Hero from '~/storyblok/components/Hero.vue';
 import Header from '~/components/Header.vue';
 import Footer from '~/components/Footer.vue';

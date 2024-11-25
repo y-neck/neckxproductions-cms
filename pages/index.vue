@@ -41,6 +41,21 @@
 </template>
 
 <script setup lang="ts">
+useSeoMeta({
+  title: 'neckXproductions //',
+  ogTitle: 'Home' /* Title of page without branding */,
+  ogSiteName: 'neckXproductions' /* Overall site name */,
+  ogType: 'website' /* 'website' | 'article' | 'book' | 'profile' */,
+  description:
+    'Herzlich willkommen auf neckXproductions! Ich kümmere mich um deine Videoprojekte und um deine Website!',
+  ogDescription:
+    'Herzlich willkommen auf neckXproductions! Ich kümmere mich um deine Videoprojekte und um deine Website!',
+  creator: '©neckXproductions',
+  robots: 'index',
+  ogImage:
+    'https://a.storyblok.com/f/310287/1850x1668/d7b1985a56/x-icon.webp' /* Image of page when sharing */,
+}); /* https://nuxt.com/docs/api/composables/use-seo-meta */
+
 import Hero from '~/storyblok/components/Hero.vue';
 import Header from '~/components/Header.vue';
 import ContactForm from '~/components/ContactForm.vue';

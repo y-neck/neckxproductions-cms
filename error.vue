@@ -33,4 +33,20 @@ import type { NuxtError } from '#app';
 const props = defineProps({
   error: Object as () => NuxtError,
 });
+
+//SEO
+useSeoMeta({
+  title: `Error // neckXproductions`,
+  ogTitle: 'Error' /* Title of page without branding */,
+  ogSiteName: 'neckXproductions' /* Overall site name */,
+  ogType: 'website' /* 'website' | 'article' | 'book' | 'profile' */,
+  description:
+    'Das hätte unter keinen Umständen passieren dürfen! Schnell zurück!',
+  ogDescription:
+    'Das hätte unter keinen Umständen passieren dürfen! Schnell zurück!',
+  creator: '©neckXproductions',
+  robots: 'noindex, nofollow',
+  ogImage:
+    'https://a.storyblok.com/f/310287/1850x1668/d7b1985a56/x-icon.webp' /* Image of page when sharing */,
+}); /* https://nuxt.com/docs/api/composables/use-seo-meta */
 </script>

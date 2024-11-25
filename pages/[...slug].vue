@@ -56,6 +56,20 @@ const story = await useAsyncStoryblok(`${slug}`, {
 console.log(`${slug} story: `, story?.value);
 const blok = story?.value;
 console.log('blok: ', blok);
+
+//SEO
+useSeoMeta({
+  title: ` ${blok?.content.projectTitle} // neckXproductions`,
+  ogTitle: ` ${blok?.content.projectTitle} // neckXproductions` /* Title of page without branding */,
+  ogSiteName: 'neckXproductions' /* Overall site name */,
+  ogType: 'article' /* 'website' | 'article' | 'book' | 'profile' */,
+  description: `${blok.content.projectDescription}` /* Description of page without branding */,
+  ogDescription: `${blok.content.projectDescription}` /* Description of page without branding */,
+  creator: '©neckXproductions',
+  robots: 'index, follow',
+  ogImage:
+    `${blok?.content.projectImg?.filename}/m/smart` /* Image of page when sharing */,
+}); /* https://nuxt.com/docs/api/composables/use-seo-meta */
 </script>
 
 <style scoped>

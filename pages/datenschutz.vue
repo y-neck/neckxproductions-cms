@@ -457,6 +457,19 @@
 </template>
 
 <script setup lang="ts">
+useSeoMeta({
+  title: ' datenschutz // neckXproductions',
+  ogTitle: 'Datenschutz' /* Title of page without branding */,
+  ogSiteName: 'neckXproductions' /* Overall site name */,
+  ogType: 'article' /* 'website' | 'article' | 'book' | 'profile' */,
+  description: 'Wie deine Daten erfasst und verarbeitet werden.',
+  ogDescription: 'Wie deine Daten erfasst und verarbeitet werden.',
+  creator: '©neckXproductions',
+  robots: 'noindex',
+  ogImage:
+    'https://a.storyblok.com/f/310287/1850x1668/d7b1985a56/x-icon.webp' /* Image of page when sharing */,
+}); /* https://nuxt.com/docs/api/composables/use-seo-meta */
+
 import Header from '~/components/Header.vue';
 import Footer from '~/components/Footer.vue';
 </script>

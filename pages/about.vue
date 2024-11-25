@@ -37,6 +37,19 @@
 </template>
 
 <script setup lang="ts">
+useSeoMeta({
+  title: ' about // neckXproductions',
+  ogTitle: 'Portfolio' /* Title of page without branding */,
+  ogSiteName: 'neckXproductions' /* Overall site name */,
+  ogType: 'website' /* 'website' | 'article' | 'book' | 'profile' */,
+  description: 'Erfahre mehr über mich und meine Projekte!',
+  ogDescription: 'Erfahre mehr über mich und meine Projekte!',
+  creator: '©neckXproductions',
+  robots: 'noindex',
+  ogImage:
+    'https://a.storyblok.com/f/310287/1850x1668/d7b1985a56/x-icon.webp' /* Image of page when sharing */,
+}); /* https://nuxt.com/docs/api/composables/use-seo-meta */
+
 import Header from '~/components/Header.vue';
 import Footer from '~/components/Footer.vue';
 

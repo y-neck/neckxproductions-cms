@@ -1,0 +1,9 @@
+/* Production */
+Idea, UIUX, Design, Development: 
+Yannick Spriessler, neckXproductions
+GitHub: https://github.com/y-neck
+
+Built with Nuxt.
+Styling: TailwindCSS
+CMS: Storyblok
+Analytics: Matomo Analytics

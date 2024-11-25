@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
+  plugins: ['~/plugins/preamble.client.ts'],
   css: ['~/assets/css/main.css'],
   postcss: {
     plugins: {
@@ -28,6 +29,15 @@ export default defineNuxtConfig({
   mdc: {
     components: {
       prose: true,
+    },
+  },
+  app: {
+    head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+      link:[{
+        rel:'icon', type:'image/x-icon', href:'~/public/favicon.ico'
+      }]
     },
   },
 });
