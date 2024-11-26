@@ -22,9 +22,9 @@
       <div class="overflow-wrapper">
         <div class="even-style-service-container self-center">
           <div class="skew-container flex">
-            <img
+            <NuxtImg
               v-if="isImage"
-              :src="`${blok?.content.imgVideo?.filename}/m/`"
+              :src="`${blok?.content.imgVideo?.filename}/m/smart`"
               :alt="`${blok?.content.imgVideo?.alt}`"
               loading="lazy"
               class="h-full aspect-auto object-cover pointer-events-none"
@@ -44,6 +44,7 @@
               muted
               autoplay
               loop
+              loading="lazy"
             >
               <source :src="`${blok?.content.imgVideo?.filename}`" />
             </video>
@@ -56,9 +57,9 @@
       <div
         class="overflow-wrapper odd-style-service-container w-1/2 md-max:self-center max-h-[300px]"
       >
-        <img
+        <NuxtImg
           v-if="isImage"
-          :src="`${blok?.content.imgVideo?.filename}/m/`"
+          :src="`${blok?.content.imgVideo?.filename}/m/smart`"
           :alt="`${blok?.content.imgVideo?.alt}`"
           loading="lazy"
           class="h-full aspect-auto object-cover pointer-events-none"
@@ -76,6 +77,7 @@
           muted
           autoplay
           loop
+          loading="lazy"
         ></video>
       </div>
       <div class="service_description lg:ml-[60px] lg:text-right lg:self-end">
@@ -117,9 +119,6 @@ const isVideo = computed(() =>
 const isExternalVideo = computed(() =>
   /(youtube|youtu\.be|vimeo)/i.test(props.blok?.content.imgVideo?.filename)
 );
-
-// Log the received props to ensure data is correct
-console.log('Service.vue: ', props.blok); // Check if `blok` data is available
 </script>
 
 <style scoped>

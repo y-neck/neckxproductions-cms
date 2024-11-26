@@ -1,16 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer base {
-  html,
-  body {
+  body,
+  html {
     @apply bg-background;
     @apply text-primary;
     @apply text-base;
     @apply min-h-screen;
   }
-
   main {
     @apply flex;
     @apply flex-col;
@@ -21,11 +19,9 @@
     @apply z-10;
     @apply px-16;
   }
-
   main > :not(header):not(footer):not(#header-xIcon-Container) {
     @apply gap-8;
   }
-
   .sectionTitle {
     @apply uppercase;
     @apply break-words;
@@ -36,7 +32,6 @@
     @apply font-bold;
     @apply italic;
   }
-
   .sectionTitle_outline {
     @apply uppercase;
     @apply font-bold;
@@ -45,22 +40,18 @@
     @apply tracking-wide;
     @apply font-bold;
     @apply italic;
-
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px;
     -webkit-text-stroke-color: #eee;
   }
-
   section {
     @apply gap-8;
     @apply my-8;
   }
 }
-
 footer {
   margin-top: auto;
 }
-
 img {
   pointer-events: none;
 }

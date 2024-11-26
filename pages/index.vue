@@ -1,7 +1,6 @@
 <template>
   <div>
     <!-- <pre>{{ story }}</pre> -->
-    <!-- Import first component -->
     <Hero
       v-if="story"
       :blok="story.content"
@@ -16,13 +15,14 @@
           id="header-xIcon-Container"
           class="flex justify-center items-center translate-y-[32px] max-md:translate-y-[0px]"
         >
-          <img
+          <NuxtImg
             id="header-xIcon"
             role="img"
             aria-label="xIcon"
             src="https://a.storyblok.com/f/310287/1850x1668/d7b1985a56/x-icon.webp/m/"
             alt="x-icon, dekorativ"
             class="w-[6rem] max-md:w-[4rem] self-center pointer-events-none"
+            loading="lazy"
           />
         </div>
         <Header />
@@ -56,10 +56,10 @@ useSeoMeta({
     'https://a.storyblok.com/f/310287/1850x1668/d7b1985a56/x-icon.webp' /* Image of page when sharing */,
 }); /* https://nuxt.com/docs/api/composables/use-seo-meta */
 
-import Hero from '~/storyblok/components/Hero.vue';
+import Hero from '~/storyblok/components/LazyHero.vue';
 import Header from '~/components/Header.vue';
-import ContactForm from '~/components/ContactForm.vue';
-import Footer from '~/components/Footer.vue';
+import ContactForm from '~/components/LazyContactForm.vue';
+import Footer from '~/components/LazyFooter.vue';
 
 const config = useRuntimeConfig();
 const story = await useAsyncStoryblok('home', {

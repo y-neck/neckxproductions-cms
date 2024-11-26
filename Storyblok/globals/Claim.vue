@@ -23,7 +23,7 @@ const props = defineProps({
 const claimText = props.blok?.claimText;
 const claimOutline = props.blok?.claimOutline;
 
-// Debugging logs
+// DEBUG:
 console.log(
   'Claim.vue: ',
   props.blok,

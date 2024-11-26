@@ -10,8 +10,10 @@
       { 'md:hidden': enableSlider === true },
       'w-full max-w-xs mx-auto flex justify-center items-center',
     ]"
+    role="group"
+    aria-roledescription="carousel"
   >
-    <CarouselContent>
+    <CarouselContent role="tabpanel">
       <CarouselItem
         v-for="(project, index) in blok.projectRef"
         :key="project._uid"
@@ -20,8 +22,8 @@
         <ProjectCard :blok="project" :index="index" />
       </CarouselItem>
     </CarouselContent>
-    <CarouselPrevious />
-    <CarouselNext v-if="canScrollNext" />
+    <CarouselPrevious role="button" aria-label="previous slide" />
+    <CarouselNext v-if="canScrollNext" role="button" aria-label="next slide" />
   </Carousel>
 
   <div
@@ -44,7 +46,7 @@
 </template>
 
 <script setup lang="ts">
-import ProjectCard from '~/components/ProjectCard.vue';
+import ProjectCard from '~/components/LazyProjectCard.vue';
 
 import {
   Carousel,
@@ -59,7 +61,8 @@ const props = defineProps({
   blok: { required: true, type: Object },
 });
 
-console.log('ProjectSection.vue props:', props);
+// DEBUG:
+//console.log('ProjectSection.vue props:', props);
 
 // Handle project display
 const enableSlider = ref(props.blok?.enableSlider);

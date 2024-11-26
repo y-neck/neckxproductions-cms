@@ -23,7 +23,7 @@
       </div>
     </section>
     <section class="disclaimer_section flex flex-col gap-4">
-      <p id="disclaimer">
+      <p id="disclaimer" loading="lazy">
         <strong>Haftungsausschluss</strong><br />
         Der Autor übernimmt keine Gewähr für die Richtigkeit, Genauigkeit,
         Aktualität, Zuverlässigkeit und Vollständigkeit der Informationen.<br />Haftungsansprüche
@@ -68,7 +68,7 @@ useSeoMeta({
 }); /* https://nuxt.com/docs/api/composables/use-seo-meta */
 
 import Header from '~/components/Header.vue';
-import Footer from '~/components/Footer.vue';
+import Footer from '~/components/LazyFooter.vue';
 </script>
 
 <style scoped></style>

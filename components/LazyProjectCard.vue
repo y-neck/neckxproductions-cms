@@ -6,7 +6,7 @@
       <div
         class="project-card card-tile h-full cursor-pointer relative overflow-scroll bg-accent border-2 border-primary rounded-lg"
       >
-        <img
+        <NuxtImg
           :src="`${blok?.content.projectImg?.filename}/m/smart`"
           :alt="`${blok?.content.projectImg?.alt}`"
           loading="lazy"
@@ -23,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-import { ProjectCard } from '#build/components';
+import { LazyProjectCard } from '#build/components';
 
 const props = defineProps({
   blok: { required: true, type: Object },
@@ -34,9 +34,9 @@ const props = defineProps({
   slug: String,
 });
 
-// DEBUG: Log the received props to ensure data is correct
-console.log('ProjectCard.vue: ', props.blok); // Check if `blok` data is available
-console.log('Resolved slug for ProjectCard.vue: ', props.blok.full_slug);
+// DEBUG:
+// console.log('ProjectCard.vue: ', props.blok); // Check if `blok` data is available
+// console.log('Resolved slug for ProjectCard.vue: ', props.blok.full_slug);
 </script>
 
 <style scoped></style>

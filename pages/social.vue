@@ -37,29 +37,23 @@
         id="social_section"
         class="flex flex-col self-center w-full gap-4 px-16"
       >
-        <a href="/">
-          <div class="socialLink" id="index">
+        <NuxtLink to="/">
+          <button role="button" class="socialLink" id="index">
             <span class="socialIcon">←</span>
-            <a
-              href="/"
-              class="text-decoration-none hover:underline hover:decoration-accent"
-              ><span>Zur Hauptseite</span>
-            </a>
-          </div></a
+            <span>Zur Hauptseite</span>
+          </button></NuxtLink
         >
-
-        <a href="/about"
-          ><div class="socialLink" id="about">
+        <NuxtLink to="/about"
+          ><button role="button" class="socialLink" id="about">
             <span class="socialIcon">←</span>
-            <a
-              href="/projects"
-              class="text-decoration-none hover:underline hover:decoration-accent"
-              ><span>Meine Projekte</span>
-            </a>
-          </div></a
+            <span>Meine Projekte</span>
+          </button></NuxtLink
         >
-        <a href="https://youtube.com/@neckXproductions" target="_blank"
-          ><div class="socialLink" id="youtube">
+        <NuxtLink
+          role="link"
+          to="https://youtube.com/@neckXproductions"
+          target="_blank"
+          ><button role="button" class="socialLink" id="youtube">
             <svg
               class="socialIcon"
               id="youtube-logo"
@@ -76,17 +70,11 @@
                 class=""
               ></path>
             </svg>
-            <a
-              href="http://youtube.com/@neckxproductions"
-              target="_blank"
-              class="text-decoration-none hover:underline hover:decoration-accent"
-              id="social_label_youtube"
-              ><span>YouTube: @neckXproductions</span>
-            </a>
-          </div></a
+            <span>YouTube: @neckXproductions</span>
+          </button></NuxtLink
         >
-        <a href="https://github.com/y-neck" target="_blank">
-          <div class="socialLink" id="github">
+        <NuxtLink to="https://github.com/y-neck" target="_blank">
+          <button role="button" class="socialLink" id="github">
             <svg
               class="socialIcon"
               id="github-logo"
@@ -104,17 +92,11 @@
                 fill="#24292f"
               ></path>
             </svg>
-            <a
-              href="http://github.com/y-neck"
-              target="_blank"
-              class="text-decoration-none hover:underline hover:decoration-accent"
-              id="social_label_github"
-              ><span>GitHub: @y-neck</span>
-            </a>
-          </div></a
+            <span>GitHub: @y-neck</span>
+          </button></NuxtLink
         >
-        <a href="https://www.linkedin.com/in/yannick-s" target="_blank">
-          <div class="socialLink" id="linkedin">
+        <NuxtLink to="https://www.linkedin.com/in/yannick-s" target="_blank">
+          <button role="button" class="socialLink" id="linkedin">
             <svg
               class="socialIcon"
               id="linkedin-icon"
@@ -136,17 +118,11 @@
                 ></path>
               </g>
             </svg>
-            <a
-              href="http://linkedin.com/in/yannick-s"
-              target="_blank"
-              class="text-decoration-none hover:underline hover:decoration-accent"
-              id="social_label_linkedin"
-              ><span>LinkedIn: in/yannick-s</span>
-            </a>
-          </div></a
+            <span>LinkedIn: in/yannick-s</span>
+          </button></NuxtLink
         >
-        <a href="https://instagram.com/neckxproductions" target="_blank">
-          <div class="socialLink" id="instagram">
+        <NuxtLink to="https://instagram.com/neckxproductions" target="_blank">
+          <button role="button" class="socialLink" id="instagram">
             <svg
               class="socialIcon"
               id="instagram-icon"
@@ -165,43 +141,31 @@
                 transform="translate(-2.5 -2.5)"
               ></path>
             </svg>
-            <a
-              href="http://instagram.com/neckXproductions"
-              target="_blank"
-              class="text-decoration-none hover:underline hover:decoration-accent"
-              id="social_label_instagram"
-              ><span>Instagram: @neckXproductions</span>
-            </a>
-          </div>
-        </a>
-        <a
-          href="https://www.digezz.ch/author/yannick-spriessler/"
+            <span>Instagram: @neckXproductions</span>
+          </button>
+        </NuxtLink>
+        <NuxtLink
+          to="https://www.digezz.ch/author/yannick-spriessler/"
           target="_blank"
         >
-          <div class="socialLink" id="digezz">
+          <button role="button" class="socialLink" id="digezz">
             <span class="socialIcon"
               ><img
                 src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://digezz.ch&size=128"
                 alt="digezz-icon"
             /></span>
-            <a
-              href="https://www.digezz.ch/author/yannick-spriessler/"
-              target="_blank"
-              ><span>Digezz</span>
-            </a>
-          </div></a
+            <span>Digezz</span>
+          </button></NuxtLink
         >
-        <a href="https://sektor22.ch/" target="_blank">
-          <div class="socialLink" id="sektor22">
+        <NuxtLink to="https://sektor22.ch/" target="_blank">
+          <button role="button" class="socialLink" id="sektor22">
             <span class="socialIcon"
               ><img
                 src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://sektor22.ch&size=128"
                 alt="sektor22-icon"
             /></span>
-            <a href="https://sektor22.ch/" target="_blank"
-              ><span>Sektor22</span>
-            </a>
-          </div></a
+            <span>Sektor22</span>
+          </button></NuxtLink
         >
       </section>
 
@@ -226,9 +190,9 @@ useSeoMeta({
     'https://a.storyblok.com/f/310287/1850x1668/d7b1985a56/x-icon.webp' /* Image of page when sharing */,
 }); /* https://nuxt.com/docs/api/composables/use-seo-meta */
 
-import Hero from '~/storyblok/components/Hero.vue';
+import Hero from '~/storyblok/components/LazyHero.vue';
 import Header from '~/components/Header.vue';
-import Footer from '~/components/Footer.vue';
+import Footer from '~/components/LazyFooter.vue';
 
 const config = useRuntimeConfig();
 const story = await useAsyncStoryblok('socials', {

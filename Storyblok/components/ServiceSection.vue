@@ -11,13 +11,12 @@
 </template>
 
 <script setup lang="ts">
-import Service from '~/components/Service.vue';
+import Service from '~/components/LazyService.vue';
 
 // accept blok as prop
 const props = defineProps({
   blok: { required: true, type: Object },
 });
-
 </script>
 
 <style scoped></style>

@@ -2,13 +2,14 @@
   <header
     class="flex flex-col md:flex-row bg-background px-16 py-4 justify-center md:justify-between align-center max-md:items-center"
   >
-    <img
+    <NuxtImg
       role="img"
       aria-label="neckXproductions Logo"
       id="header-logo"
       src="https://a.storyblok.com/f/310287/2925x400/82879cfbe9/neckxproductions_white.webp/m/"
       alt="neckXproductions-logo"
       class="h-[36px] w-auto object-fit pointer-events-none"
+      loading="lazy"
     />
 
     <nav class="flex gap-[60px] justify-center md:justify-end">

@@ -8,7 +8,7 @@
       </h1>
       <p>Zuletzt aktualisiert am: 15.11.2024</p>
       <br />
-      <p>
+      <p loading="lazy">
         Wir legen grossen Wert darauf, dass der Umgang mit Personendaten
         transparent ist. Diese Datenschutzerklärung gibt Auskunft darüber,
         welche personenbezogenen Daten wir sammeln, zu welchem Zweck und an wen
@@ -53,13 +53,13 @@
         3.1 Welche Daten sammeln wir von Ihnen und von wem erhalten wir diese
         Daten
       </h3>
-      <p>
+      <p loading="lazy">
         In erster Linie bearbeiten wir Personendaten, die Sie uns übermitteln
         oder die wir beim Betrieb unserer Website sammeln. Unter Umständen
         erhalten wir Personendaten über Sie auch von Dritten. Das können
         folgende Kategorien sein:
       </p>
-      <ul>
+      <ul loading="lazy">
         <li>Personenstammdaten (Name, Adresse, Geburtsdaten, etc.);</li>
         <li>Kontaktdaten (Handynummer, E-Mailadresse, etc.);</li>
         <li>Finanzdaten (bspw. Kontoangaben);</li>
@@ -73,7 +73,7 @@
       </ul>
       <br />
       <h3>3.2 Unter welchen Voraussetzungen bearbeiten wir Ihre Daten?</h3>
-      <p>
+      <p loading="lazy">
         Wir behandeln Ihre Daten vertraulich und gemäss den in dieser
         Datenschutzerklärung festgelegten Zwecken. Wir achten dabei auf eine
         transparente und verhältnismässige Bearbeitung.<br /><br />Falls wir
@@ -94,7 +94,7 @@
       </ul>
       <br />
       <h3>3.3 Wie können Sie Ihre Einwilligung widerrufen?</h3>
-      <p>
+      <p loading="lazy">
         Haben Sie uns eine Einwilligung zur Bearbeitung Ihrer personenbezogenen
         Daten für bestimmte Zwecke erteilt, bearbeiten wir Ihre Daten im Rahmen
         dieser Einwilligung, soweit wir keinen anderen Rechtfertigungsgrund
@@ -109,13 +109,13 @@
       </h3>
       <br />
       <h4>a. Grundsatz</h4>
-      <p>
+      <p loading="lazy">
         Wir sind unter Umständen darauf angewiesen, die Dienste Dritter oder von
         verbundenen Unternehmen in Anspruch zu nehmen und diese mit der
         Verarbeitung Ihrer Daten zu beauftragen (sog. Auftragsverarbeiter).
         Kategorien der Empfänger sind namentlich:
       </p>
-      <ul>
+      <ul loading="lazy">
         <li>Buchhaltung, Treuhand und Revisionsunternehmen;</li>
         <li>Beratungsunternehmen (Rechtsberatung, Steuern, etc.);</li>
         <li>IT-Dienstleister (Webhosting, Support, Clouddienste, etc.);</li>
@@ -123,7 +123,7 @@
         <li>Anbieter von Tracking-, Conversion- und Werbedienstleistungen.</li>
       </ul>
       <br />
-      <p>
+      <p loading="lazy">
         Wir stellen sicher, dass diese Dritten und unsere verbundenen
         Unternehmen die Voraussetzungen des Datenschutzes einhalten und Ihre
         personenbezogenen Daten vertraulich behandeln.<br /><br />Unter
@@ -132,7 +132,7 @@
       </p>
       <br />
       <h4>b. Besuch unserer Social-Media-Kanäle</h4>
-      <p>
+      <p loading="lazy">
         Wir haben auf unserer Website Links zu unseren Social-Media-Kanälen
         eingebettet. Das ist für Sie jeweils ersichtlich (typischerweise über
         entsprechende Symbole). Klicken Sie auf die Symbole, werden Sie auf
@@ -145,7 +145,7 @@
       </p>
       <br />
       <h4>c. Weitergabe ins Ausland</h4>
-      <p>
+      <p loading="lazy">
         Unter Umständen kann es im Rahmen der Auftragsbearbeitung zu
         Übermittlung Ihrer personenbezogenen Daten an Unternehmen im Ausland
         kommen. Diese Unternehmen sind im gleichen Umfang zum Datenschutz
@@ -163,7 +163,7 @@
       </p>
       <br />
       <h3>3.5 Wie lange bewahren wir Ihre Daten auf?</h3>
-      <p>
+      <p loading="lazy">
         Wir speichern personenbezogene Daten nur so lange, wie dies erforderlich
         ist, um die einzelnen Zwecke, zu denen die Daten erhoben wurden, zu
         erfüllen.<br /><br />Daten, die wir bei Ihrem Besuch auf unserer Website
@@ -178,7 +178,7 @@
       </p>
       <br />
       <h3>3.6 Wie schützen wir Ihre Daten?</h3>
-      <p>
+      <p loading="lazy">
         Wir werden Ihre Daten sicher aufbewahren und alle angemessenen
         Massnahmen ergreifen, um Ihre Daten vor Verlust, Zugriff, Missbrauch
         oder Änderungen zu schützen.<br /><br />Unsere Vertragspartner und
@@ -195,7 +195,7 @@
       <h3>3.7 Welche Rechte haben Sie?</h3>
       <br />
       <h4>a. Auskunftsrecht</h4>
-      <p>
+      <p loading="lazy">
         Sie können jederzeit eine Auskunft über die von uns über Sie
         gespeicherten Daten verlangen. Wir bitten Sie, Ihr Auskunftsgesuch
         zusammen mit einem Identitätsnachweis an
@@ -216,7 +216,7 @@
           Vertrags bekannt gegeben haben.
         </li>
       </ul>
-      <p>
+      <p loading="lazy">
         Wir können die Auskunft bzw. Datenherausgabe einschränken oder
         verweigern, wenn dies unseren gesetzlichen Verpflichtungen, berechtigten
         eigenen oder öffentlichen Interessen oder Interessen einer Drittperson
@@ -230,7 +230,7 @@
       <br />
       <h4>b. Löschung und Berichtigung</h4>
       <br />
-      <p>
+      <p loading="lazy">
         Sie haben jederzeit die Möglichkeit, die Löschung oder Berichtigung
         Ihrer Daten zu verlangen. Wir können das Gesuch abweisen, wenn
         gesetzliche Vorschriften uns zur längeren bzw. unveränderten
@@ -242,7 +242,7 @@
       </p>
       <br />
       <h4>c. Rechtsweg</h4>
-      <p>
+      <p loading="lazy">
         Sind Sie von der Bearbeitung personenbezogener Daten betroffen, haben
         Sie das Recht, Ihre Rechte gerichtlich durchzusetzen oder bei der
         zuständigen Aufsichtsbehörde eine Meldung einzureichen. Die zuständige
@@ -251,7 +251,7 @@
       </p>
       <br />
       <h3>3.8 Änderungen an der Datenschutzerklärung</h3>
-      <p>
+      <p loading="lazy">
         Wir können diese Datenschutzerklärung jederzeit ändern. Die Änderungen
         werden auf https://neckxproductions.ch veröffentlicht, Sie werden nicht
         gesondert darüber informiert.
@@ -262,7 +262,7 @@
       <h3>4.1 Bereitstellen der Webseite und Erstellung von Logfiles</h3>
       <br />
       <h4>Welche Informationen erhalten wir und wie nutzen wir sie?</h4>
-      <p>
+      <p loading="lazy">
         Indem Sie https://neckxproductions.ch besuchen, werden auf unseren
         Servern oder auf Servern von Dienstleistungen und Produkten, die wir
         beziehen und / oder installiert haben, bestimmte Daten automatisch zu
@@ -270,7 +270,7 @@
         Sicherungszwecke oder für Trackingzwecke gespeichert. Es handelt sich
         dabei um:
       </p>
-      <ul>
+      <ul loading="lazy">
         <li>den Namen Ihres Internetserviceproviders;</li>
         <li>Ihre IP-Adresse (unter Umständen);</li>
         <li>die Version Ihrer Browser-Software;</li>
@@ -283,7 +283,7 @@
       </ul>
       <br />
       <h4>Weshalb dürfen wir diese Daten bearbeiten?</h4>
-      <p>
+      <p loading="lazy">
         Diese Daten können keiner bestimmten Person zugeordnet werden und es
         findet keine Zusammenführung dieser Daten mit anderen Datenquellen
         statt. Die Speicherung der Logfiles erfolgt, um die Funktionsfähigkeit
@@ -293,7 +293,7 @@
       </p>
       <br />
       <h4>Wie können Sie die Datenerfassung verhindern?</h4>
-      <p>
+      <p loading="lazy">
         Die Daten werden nur solange gespeichert, wie dies zur Erreichung des
         Zweckes Ihrer Erhebung notwendig ist. Dementsprechend werden die Daten
         nach Beendigung jeder Sitzung gelöscht. Die Speicherung der Logfiles ist
@@ -303,7 +303,7 @@
       <br />
       <br /><br />
       <h3>4.2 Matomo Analytics</h3>
-      <p>
+      <p loading="lazy">
         Wir verwenden auf unserer Website den Dienst "Matomo Analytics", der von
         der InnoCraft Ltd., 150 Willis St, 6011 Wellington, Neuseeland
         bereitgestellt wird. Matomo ist eine Open-Source-Software, die
@@ -326,7 +326,7 @@
       </p>
       <br /><br />
       <h3>4.3 Matomo Tag Manager</h3>
-      <p>
+      <p loading="lazy">
         Auf unserer Website nutzen wir den "Matomo Tag Manager", ein Produkt von
         InnoCraft Ltd., 150 Willis St, 6011 Wellington, Neuseeland. Der Matomo
         Tag Manager ist eine Open-Source-Lösung, die es uns ermöglicht,
@@ -349,7 +349,7 @@
       </p>
       <br /><br />
       <h3>4.4 Font Awesome</h3>
-      <p>
+      <p loading="lazy">
         Font Awesome wird betrieben von Fonticons, Inc., mit Sitz in 6 Porter
         Road, Apartment 3R, Cambridge, MA 02140, USA. Font Awesome ist eine
         Sammlung von skalierbaren Vektor-Icons, die Website-Entwicklern
@@ -369,7 +369,7 @@
       </p>
       <br /><br />
       <h3>4.5 Google Fonts API</h3>
-      <p>
+      <p loading="lazy">
         Auf unserer Website nutzen wir die Google Fonts API, einen Dienst der
         Google LLC (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA;
         "Google"), um Schriftarten (Fonts) einzubinden. Durch die Einbindung
@@ -387,7 +387,7 @@
       </p>
       <br /><br />
       <h3>4.6 Vimeo</h3>
-      <p>
+      <p loading="lazy">
         Vimeo ist ein Service von Vimeo Inc., 555 West 18th Street, New York,
         New York 10011, USA. Vimeo ist eine Plattform, die es Benutzern
         ermöglicht, Videos hochzuladen, zu teilen und anzusehen. Es bietet auch
@@ -409,7 +409,7 @@
       </p>
       <br /><br />
       <h3>4.7 YouTube</h3>
-      <p>
+      <p loading="lazy">
         Auf unserer Website sind Videos von YouTube, einer Plattform der Google
         LLC (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA; "Google"),
         eingebunden. Bei der Anzeige der Videos oder beim Klicken auf den
@@ -424,7 +424,7 @@
       </p>
       <br /><br />
       <h3>4.8 Storyblok</h3>
-      <p>
+      <p loading="lazy">
         Unsere Website basiert auf der Plattform Storyblok, einem
         Content-Management-System, das von der Storyblok GmbH,
         Peter-Behrens-Platz 2, 4020 Linz, Österreich betrieben wird. Storyblok
@@ -471,7 +471,7 @@ useSeoMeta({
 }); /* https://nuxt.com/docs/api/composables/use-seo-meta */
 
 import Header from '~/components/Header.vue';
-import Footer from '~/components/Footer.vue';
+import Footer from '~/components/LazyFooter.vue';
 </script>
 
 <style scoped>

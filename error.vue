@@ -26,7 +26,7 @@
 
 <script setup lang="ts">
 import Header from './components/Header.vue';
-import Footer from './components/Footer.vue';
+import Footer from './components/LazyFooter.vue';
 
 import type { NuxtError } from '#app';
 

@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     ['@storyblok/nuxt', { accessToken: process.env.STORYBLOK_KEY }],
     'shadcn-nuxt',
     '@nuxtjs/mdc',
+    '@nuxt/image',
   ],
   runtimeConfig: {
     public: {
@@ -35,9 +36,20 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      link:[{
-        rel:'icon', type:'image/x-icon', href:'~/public/favicon.ico'
-      }]
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: '~/public/favicon.ico',
+        },
+        {
+          rel: 'canonical',
+          href: 'https://neckXproductions.ch',
+        },
+      ],
+      htmlAttrs: {
+        lang: 'de' /* Set lang attribute on <html> tag */,
+      },
     },
   },
 });

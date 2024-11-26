@@ -1,10 +1,10 @@
 <template>
   <div v-editable="blok">
     <Header />
-    <img
+    <NuxtImg
       :src="`${blok?.content.projectImg?.filename}/m/smart`"
-      :alt="`${blok?.content.projectImg?.alt} || Project image`"
-      loading="lazy"
+      :alt="`${blok?.content.projectImg?.alt} Project image (decorative) || Project image`"
+      preload
       class="w-full h-[250px] aspect-video object-cover"
     />
     <main class="flex flex-col gap-8 my-8">
@@ -14,7 +14,7 @@
         >← Zurück zur Projektübersicht</NuxtLink
       >
       <article class="flex flex-col gap-8">
-        <h1 class="text-lg font-bold" id="project-title">
+        <h1 class="text-lg font-bold" id="project-title" tabindex="0">
           {{ blok?.content.projectTitle }}
         </h1>
         <MDC :value="blok?.content.projectDescription" tag="article" />
@@ -22,6 +22,7 @@
           v-if="blok?.content.mediaElement"
           class="media-element-iframe aspect-video object-fit"
           v-html="blok?.content.mediaElement"
+          loading="lazy"
         ></div>
         <MDC :value="blok?.content.Reference" />
       </article>
@@ -32,7 +33,7 @@
 
 <script setup lang="ts">
 import Header from '~/components/Header.vue';
-import Footer from '~/components/Footer.vue';
+import Footer from '~/components/LazyFooter.vue';
 
 import { useRoute } from 'nuxt/app';
 
@@ -67,8 +68,7 @@ useSeoMeta({
   ogDescription: `${blok.content.projectDescription}` /* Description of page without branding */,
   creator: '©neckXproductions',
   robots: 'index, follow',
-  ogImage:
-    `${blok?.content.projectImg?.filename}/m/smart` /* Image of page when sharing */,
+  ogImage: `${blok?.content.projectImg?.filename}/m/smart` /* Image of page when sharing */,
 }); /* https://nuxt.com/docs/api/composables/use-seo-meta */
 </script>
 

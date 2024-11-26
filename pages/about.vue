@@ -51,7 +51,7 @@ useSeoMeta({
 }); /* https://nuxt.com/docs/api/composables/use-seo-meta */
 
 import Header from '~/components/Header.vue';
-import Footer from '~/components/Footer.vue';
+import Footer from '~/components/LazyFooter.vue';
 
 const config = useRuntimeConfig();
 const story = await useAsyncStoryblok('about', {

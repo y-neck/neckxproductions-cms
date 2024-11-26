@@ -15,7 +15,7 @@
           :index="index"
         />
       </div>
-      <img
+      <NuxtImg
         v-if="blok?.eduImg"
         :src="`${blok?.eduImg?.filename}/m/smart`"
         :alt="`${blok?.eduImg?.alt} || 'Education image'`"
@@ -27,7 +27,7 @@
 </template>
 
 <script setup lang="ts">
-import EduCard from '~/components/EduCard.vue';
+import EduCard from '~/components/LazyEduCard.vue';
 
 const props = defineProps({
   blok: { required: true, type: Object },
