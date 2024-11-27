@@ -4,9 +4,9 @@
     <Hero
       v-if="story"
       :blok="story.content"
-      class="block sticky w-full top-0 -z-10"
+      class="block sticky w-full top-0 z-20"
     />
-    <div id="content-wrapper" class="bg-background">
+    <div id="content-wrapper" class="bg-background z-30 relative">
       <div
         id="header-section"
         class="translate-y-[-72px] max-md:translate-y-[-32px] z-20"
