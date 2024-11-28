@@ -52,7 +52,9 @@ export default defineNuxtConfig({
           innerHTML: `
  var _paq = window._paq = window._paq || [];
   /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
   _paq.push(["setCookieDomain", "*.neckxproductions.ch"]);
+  _paq.push(["setDoNotTrack", true]);
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {
@@ -62,7 +64,8 @@ export default defineNuxtConfig({
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
     g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
   })();
-          `,
+  console.log('matomo loaded');
+  `,
           type: 'text/javascript',
         },
       ],
