@@ -15,6 +15,10 @@ export default defineNuxtConfig({
     'shadcn-nuxt',
     '@nuxtjs/mdc',
     '@nuxt/image',
+    [
+      'nuxt-matomo',
+      { matomoUrl: 'https://analytix.neckxproductions.ch', siteId: 1 },
+    ],
   ],
   runtimeConfig: {
     public: {
