@@ -1,0 +1,129 @@
+&lt;details&gt;
+&lt;summary&gt;Click to view System Check&lt;/summary&gt;
+
+### Mandatory checks
+
+#### PHP version &gt;= 7.2.5:
+ ✔ 8.1.30
+
+#### PDO extension:
+ ✔ 
+
+#### PDO\MYSQL extension:
+ ✔ 
+
+#### MYSQLI extension:
+ ✔ 
+
+#### Other required extensions:
+ ✔ zlib ✔ json ✔ filter ✔ hash ✔ session
+
+#### Required functions:
+ ✔ debug_backtrace ✔ eval ✔ hash ✔ gzcompress ✔ gzuncompress ✔ pack
+
+#### Required PHP configuration (php.ini):
+ ✔ session.auto_start = 0 ✔ max_execution_time = 0 OR = -1 OR &gt;= 30
+
+#### Directories with write access:
+ ✔ $DOC_ROOT/tmp ✔ $DOC_ROOT/tmp/assets ✔ $DOC_ROOT/tmp/cache ✔ $DOC_ROOT/tmp/climulti ✔ $DOC_ROOT/tmp/latest ✔ $DOC_ROOT/tmp/logs ✔ $DOC_ROOT/tmp/sessions ✔ $DOC_ROOT/tmp/tcpdf ✔ $DOC_ROOT/tmp/templates_c ✔ $DOC_ROOT/config
+
+
+### Optional checks
+
+#### File integrity:
+ ⚠ Warning: File integrity check failed and reported some errors. You should fix this issue and then refresh this page until it shows no error.&lt;br/&gt;&lt;br/&gt;Files were found in your Matomo, but we didn't expect them.&lt;br/&gt;--&gt; Please delete these files to prevent errors. 
+
+#### 64-bit PHP Binary:
+ ✔ 
+
+#### Tracker status:
+ ✔ 
+
+#### Memory limit:
+ ✔ 640M
+
+#### Time zone:
+ ✔ 
+
+#### Open URL:
+ ✔ curl
+
+#### PageSpeed is turned off:
+ ✔ 
+
+#### GD &gt; 2.x + FreeType (graphics):
+ ✔ 
+
+#### Other extensions:
+ ✔ json ✔ libxml ✔ dom ✔ SimpleXML ✔ openssl
+
+#### Other functions:
+ ⚠ Warning: shell_exec&lt;br/&gt;It is recommended to turn on this PHP built-in function. Read this to learn more. ✔ set_time_limit ⚠ Warning: mail&lt;br/&gt;Feedback and 'Lost password' messages will not be sent without 'mail()'. ✔ parse_ini_file ✔ glob ✔ gzopen ✔ md5_file
+
+#### Filesystem:
+ ✔ 
+
+#### Set up Cron - Managing processes via CLI:
+ not supported (optional) (Reasons: shell_exec is disabled) learn more
+
+#### Forced SSL Connection:
+ ⚠ Warning: We recommend using Matomo over secure SSL connections only. Please click here continue the installation process over SSL.
+
+#### Update over HTTPS:
+ ✔ 
+
+#### Writable JavaScript Tracker ("/matomo.js"):
+ ✔ 
+
+
+### Informational results
+
+#### Matomo Version:
+ 5.1.2
+
+#### PHP_OS:
+ Linux
+
+#### PHP SAPI:
+ ⚠ Warning: fpm-fcgi&lt;br&gt;&lt;br&gt;PHP FPM will ignore .htaccess rules for .php files. To ensure that sensitive files cannot be accessed directly it is recommended to exclude certain directories from being handled by PHP FPM by adding the line &lt;code&gt;ProxyPass /config !&lt;/code&gt; to the &lt;code&gt;mod_proxy_fcgi.c&lt;/code&gt; section in your apache virtual host config just above the &lt;code&gt;ProxyPassMatch&lt;/code&gt; line.
+
+#### PHP Timezone:
+ UTC
+
+#### PHP Time:
+ 1732796971
+
+#### PHP Datetime:
+ 2024-11-28 12:29:31
+
+#### PHP Disabled functions:
+ exec, mail, passthru, pcntl_exec, popen, proc_open, shell_exec, system
+
+#### PHP INI max_execution_time:
+ 60
+
+#### PHP INI post_max_size:
+ 300M
+
+#### PHP INI max_input_vars:
+ 10000
+
+#### PHP INI zlib.output_compression:
+ 1
+
+#### Curl Version:
+ 7.74.0, OpenSSL/1.1.1w
+
+#### Suhosin Installed:
+ 0
+
+#### Server Info:
+ Apache
+
+#### User Agent:
+ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/20100101 Firefox/133.0
+
+#### Browser Language:
+ en-gb,en
+
+&lt;/details&gt;
