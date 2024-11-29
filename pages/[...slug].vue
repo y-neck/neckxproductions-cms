@@ -18,12 +18,18 @@
           {{ blok?.content.projectTitle }}
         </h1>
         <MDC :value="blok?.content.projectDescription" tag="article" />
-        <div
-          v-if="blok?.content.mediaElement"
-          class="media-element-iframe aspect-video object-fit"
-          v-html="blok?.content.mediaElement"
+        <!-- v-if="blok?.content.mediaElement" -->
+        <!-- v-html="blok?.content.mediaElement" -->
+        <iframe
+          v-if="blok?.content.videoEmbed"
+          :src="`https://www.youtube.com/embed/${blok?.content.videoEmbed}`"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
           loading="lazy"
-        ></div>
+          class="w-full"
+        ></iframe>
         <MDC :value="blok?.content.Reference" />
       </article>
     </main>
@@ -74,7 +80,7 @@ useSeoMeta({
 
 <style scoped>
 iframe {
-  @apply w-full h-auto aspect-video object-cover;
+  @apply w-full h-auto aspect-video object-cover !important;
 }
 
 li {
@@ -82,5 +88,8 @@ li {
 }
 h2 {
   @apply text-lg hover:underline decoration-accent;
+}
+a {
+  @apply hover:underline hover:decoration-accent;
 }
 </style>
