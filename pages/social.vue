@@ -5,7 +5,7 @@
     <Hero
       v-if="story"
       :blok="story.content"
-      class="block sticky w-full top-0 -z-20"
+      class="block sticky w-full top-0 z-20"
     />
     <div id="content-wrapper" class="bg-background z-30 relative">
       <div
