@@ -2,7 +2,11 @@
   <div v-editable="blok">
     <Header />
     <NuxtImg
-      :src="`${blok?.content.projectImg?.filename}/m/smart`"
+      id="project-image"
+      :src="
+        `${blok?.content.projectImg?.filename}/m/smart` ||
+        'https://a.storyblok.com/f/310287/1920x1440/1e96d3ec17/neckxproductions_banner.png/m/smart'
+      "
       :alt="`${blok?.content.projectImg?.alt} Project image (decorative) || Project image`"
       preload
       class="w-full h-[250px] aspect-video object-cover"
@@ -14,12 +18,18 @@
         >← Zurück zur Projektübersicht</NuxtLink
       >
       <article class="flex flex-col gap-8">
-        <h1 class="text-lg font-bold" id="project-title" tabindex="0">
+        <h1
+          class="text-lg font-bold leading-10"
+          id="project-title"
+          tabindex="0"
+        >
           {{ blok?.content.projectTitle }}
         </h1>
-        <MDC :value="blok?.content.projectDescription" tag="article" />
-        <!-- v-if="blok?.content.mediaElement" -->
-        <!-- v-html="blok?.content.mediaElement" -->
+        <MDC
+          v-if="blok?.content.projectDescription"
+          :value="blok?.content.projectDescription"
+          tag="article"
+        />
         <iframe
           v-if="blok?.content.videoEmbed"
           :src="`https://www.youtube.com/embed/${blok?.content.videoEmbed}`"
@@ -30,7 +40,7 @@
           loading="lazy"
           class="w-full"
         ></iframe>
-        <MDC :value="blok?.content.Reference" />
+        <MDC v-if="blok?.content.Reference" :value="blok?.content.Reference" />
       </article>
     </main>
     <Footer />
@@ -91,5 +101,9 @@ h2 {
 }
 a {
   @apply hover:underline hover:decoration-accent;
+}
+
+img :not(#project-image) {
+  @apply w-full h-auto;
 }
 </style>
