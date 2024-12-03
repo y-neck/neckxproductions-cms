@@ -2,7 +2,7 @@
   <div>
     <form
       id="contact-form"
-      @submit="handleSubmit"
+      @submit.prevent="handleSubmit"
       method="post"
       class="flex flex-col gap-[30px]"
     >
@@ -14,7 +14,7 @@
           name="name"
           placeholder="Name"
           required
-          v-model:="name"
+          v-model:="form.name"
         />
       </label>
       <label>
@@ -23,7 +23,7 @@
           id="email_input_field"
           type="email"
           name="email"
-          v-model:="email"
+          v-model:="form.email"
           placeholder="Email"
           required
         />
@@ -35,7 +35,7 @@
             id="winnie-poo_checkbox"
             type="checkbox"
             name="winnie-poo-checkbox"
-            v-model="hpCheckbox"
+            v-model="form.hpCheckbox"
           />
         </label>
         <label>
@@ -44,7 +44,7 @@
             type="text"
             id="winnie-poo_text"
             name="winnie-poo-text"
-            v-model="hpText"
+            v-model="form.hpText"
           />
         </label>
       </div>
@@ -56,7 +56,7 @@
           required
           min-length="5"
           class="min-h-15"
-          v-model="message"
+          v-model="form.message"
         ></textarea>
       </label>
       <button
@@ -71,17 +71,21 @@
 </template>
 
 <script setup lang="ts">
-import { Resend } from 'resend';
 import { ref } from 'vue';
 
-const resend = new Resend(`${process.env.RESEND_API_KEY}`);
+const access_key = process.env.WEB3_KEY;
 
 // Get form inputs
-const name = ref('');
-const email = ref('');
-const message = ref('');
-const hpCheckbox = ref(false);
-const hpText = ref('');
+const form = ref({
+  name: '',
+  email: '',
+  message: '',
+  hpCheckbox: false,
+  hpText: '',
+});
+
+const result = ref('');
+const status: any = ref('');
 
 // Validation functions
 function isNotEmpty(value: string): boolean {
@@ -94,22 +98,22 @@ function isEmail(value: string): boolean {
 }
 
 function isHoneypotEmpty(): boolean {
-  return !hpCheckbox.value && hpText.value.trim() === '';
+  return !form.value.hpCheckbox && form.value.hpText.trim() === '';
 }
 
 // Form validation
 function validateForm(): boolean {
-  if (!isNotEmpty(name.value)) {
+  if (!isNotEmpty(form.value.name)) {
     alert('Bitte geben Sie Ihren Namen ein.');
     return false;
   }
 
-  if (!isEmail(email.value)) {
+  if (!isEmail(form.value.email)) {
     alert('Bitte geben Sie eine gültige E-Mail-Adresse ein.');
     return false;
   }
 
-  if (!isNotEmpty(message.value)) {
+  if (!isNotEmpty(form.value.message)) {
     alert('Bitte geben Sie eine Anfrage ein.');
     return false;
   }
@@ -123,8 +127,16 @@ function validateForm(): boolean {
 }
 
 // Form submission
-async function handleSubmit(event: Event) {
-  event.preventDefault(); // Prevent default behavior
+const handleSubmit = async () => {
+  // // DEBUG:
+  // console.log({
+  //   name: name.value,
+  //   email: email.value,
+  //   message: message.value,
+  // });
+  result.value = 'Please wait...';
+
+  const enc_email: string = atob('eWFubmlja0BuZWNrWHByb2R1Y3Rpb25zLmNo'); //Base64-encoded email address;
 
   if (!validateForm()) {
     console.error('Validation failed');
@@ -132,24 +144,70 @@ async function handleSubmit(event: Event) {
   }
 
   try {
-    const response = await resend.emails.send({
-      from: `${email.value}`,
-      to: ['yannick@neckxproductions.ch'], // Replace with recipient email
-      subject: 'Neue Anfrage via neckXproductions.ch',
-      html: `
-        <p><strong>Name:</strong> ${name.value}</p>
-        <p><strong>Email:</strong> ${email.value}</p>
-        <p>${message.value}</p>
-      `,
+    const response = await $fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: {
+        access_key: access_key,
+        name: form.value.name,
+        email: form.value.email,
+        message: form.value.message,
+        hpCheckbox: form.value.hpCheckbox,
+        hpText: form.value.hpText,
+      },
     });
-
-    console.log('Email sent successfully:', response);
-    alert('Ihre Anfrage wurde erfolgreich gesendet.');
-  } catch (error) {
+    // DEBUG:
+    console.log('Form submitted:', response);
+  } catch (error: any) {
+    // Print the error object to inspect it
     console.error('Error sending email:', error);
-    alert('Beim Senden Ihrer Anfrage ist ein Fehler aufgetreten.');
+    alert(
+      'Beim Senden Ihrer Anfrage ist ein Fehler aufgetreten. Stattdessen als Email senden?'
+    );
+
+    console.log('Email sent unsuccessfully, reverting to plain email method');
+
+    //Fallback to plain email method
+    class Email {
+      name: string;
+      email: string;
+      message: string;
+      constructor(name: string, email: string, message: string) {
+        this.name = name;
+        this.email = email;
+        this.message = message;
+      }
+    }
+
+    let inq = new Email(form.value.name, form.value.email, form.value.message);
+    // Construct the mailto URL
+    let mailtoLink = `mailto:${enc_email}?subject=Anfrage neckXproductions&body=Name: ${encodeURIComponent(
+      inq.name
+    )}%0AEmail: ${encodeURIComponent(
+      inq.email
+    )}%0A%0AMessage:%0A${encodeURIComponent(inq.message)}`;
+    // Create a temporary link element to trigger the mailto action
+    let tempLink = document.createElement('a');
+    tempLink.href = mailtoLink;
+    tempLink.style.display = 'none';
+    document.body.appendChild(tempLink);
+    tempLink.click();
+    document.body.removeChild(tempLink);
+  } finally {
+    // Reset form after submission
+    form.value.name = '';
+    form.value.email = '';
+    form.value.message = '';
+
+    // Clear result and status after 5 seconds
+    setTimeout(() => {
+      result.value = '';
+      status.value = '';
+    }, 5000);
   }
-}
+};
 </script>
 
 <style scoped>
