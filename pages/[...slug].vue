@@ -29,6 +29,7 @@
           v-if="blok?.content.projectDescription"
           :value="blok?.content.projectDescription"
           tag="article"
+          class="prose lg:prose-lg prose-invert prose-a:text-accent prose-a:underline prose-li:list-disc max-w-none prose-img:w-full prose-img:h-auto prose-img:aspect-video prose-img:object-cover"
         />
         <iframe
           v-if="blok?.content.videoEmbed"
@@ -40,7 +41,11 @@
           loading="lazy"
           class="w-full"
         ></iframe>
-        <MDC v-if="blok?.content.Reference" :value="blok?.content.Reference" />
+        <MDC
+          v-if="blok?.content.Reference"
+          :value="blok?.content.Reference"
+          class="prose lg:prose-lg prose-invert prose-a:text-accent prose-a:underline prose-li:list-disc max-w-none"
+        />
       </article>
     </main>
     <Footer />
