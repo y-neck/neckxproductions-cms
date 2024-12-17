@@ -1,6 +1,5 @@
 <template>
   <!-- <pre>{{ blok }}</pre> -->
-  <!-- <NuxtLink :to="`/projects/${blok?.slug}`"> -->
   <NuxtLink :to="`${blok?.full_slug}`">
     <div class="project-card-container aspect-video">
       <div

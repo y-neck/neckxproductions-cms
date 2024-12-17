@@ -61,7 +61,7 @@ const props = defineProps({
   blok: { required: true, type: Object },
 });
 
-// DEBUG:
+// //DEBUG:
 //console.log('ProjectSection.vue props:', props);
 
 // Handle project display

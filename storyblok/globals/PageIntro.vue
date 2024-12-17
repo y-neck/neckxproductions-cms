@@ -29,7 +29,7 @@ const sectionImage = props.blok?.sectionImage;
 const introTitle = props.blok?.introTitle;
 const introText = props.blok?.introText;
 
-// DEBUG:
+// // DEBUG:
 // console.log('PageIntro.vue: ', props.blok);
 </script>
 

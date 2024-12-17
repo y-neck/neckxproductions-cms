@@ -18,6 +18,6 @@ const props = defineProps({
 // Attempt to extract heroImg safely
 const heroImg = props.blok?.body?.[0]?.heroImg;
 
-// DEBUG:
-console.log('heroImg: ', heroImg);
+// // DEBUG:
+// console.log('heroImg: ', heroImg);
 </script>

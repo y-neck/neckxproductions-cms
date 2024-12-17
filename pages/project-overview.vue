@@ -36,8 +36,8 @@ const story = await useAsyncStoryblok('project-overview', {
   version: config.public.storyblok_version,
   resolve_relations: 'ProjectSection.projectRef',
 }); /* Fetch data from Storyblok */
-// DEBUG:
-console.log(story.value);
+// // DEBUG:
+// console.log(story.value);
 </script>
 
 <style scoped></style>

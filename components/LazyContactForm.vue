@@ -167,6 +167,7 @@ const handleSubmit = async () => {
       'Beim Senden Ihrer Anfrage ist ein Fehler aufgetreten. Stattdessen als Email senden?'
     );
 
+    // DEBUG:
     console.log('Email sent unsuccessfully, reverting to plain email method');
 
     //Fallback to plain email method

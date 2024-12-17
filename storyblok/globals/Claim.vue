@@ -23,13 +23,13 @@ const props = defineProps({
 const claimText = props.blok?.claimText;
 const claimOutline = props.blok?.claimOutline;
 
-// DEBUG:
-console.log(
-  'Claim.vue: ',
-  props.blok,
-  claimOutline ? claimOutline : 'No claim outline',
-  claimText ? claimText : 'No claim text'
-);
+// // DEBUG:
+// console.log(
+//   'Claim.vue: ',
+//   props.blok,
+//   claimOutline ? claimOutline : 'No claim outline',
+//   claimText ? claimText : 'No claim text'
+// );
 </script>
 
 <style scoped></style>
