@@ -12,7 +12,7 @@
       loading="lazy"
     />
 
-    <nav class="flex gap-[60px] justify-center md:justify-end">
+    <nav class="flex gap-[60px] justify-center items-center md:justify-end">
       <NuxtLink
         v-for="({ navItem, url }, index) in [
           { navItem: 'Home', url: '/' },
