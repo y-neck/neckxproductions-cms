@@ -2,6 +2,10 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
+  routeRules:{
+    '/': {prerender: true},
+    '/projects/**': {prerender: true},
+  },
   plugins: ['~/plugins/preamble.client.ts'],
   css: ['~/assets/css/main.css'],
   postcss: {
