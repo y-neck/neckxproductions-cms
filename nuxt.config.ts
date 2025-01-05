@@ -55,6 +55,10 @@ export default defineNuxtConfig({
           hid: 'matomo', // Unique identifier for the script
           innerHTML: `
  var _paq = window._paq = window._paq || [];
+
+  // accurately measure the time spent in the visit
+  _paq.push(['enableHeartBeatTimer']);
+
   /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
   _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
   _paq.push(["setCookieDomain", "*.neckxproductions.ch"]);
