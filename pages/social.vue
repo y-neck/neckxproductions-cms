@@ -37,18 +37,21 @@
         id="social_section"
         class="flex flex-col self-center w-full gap-4 px-16"
       >
+      <!-- Home -->
         <NuxtLink to="/">
           <button role="button" class="socialLink" id="index">
             <span class="socialIcon">←</span>
             <span>Zur Hauptseite</span>
           </button></NuxtLink
         >
-        <NuxtLink to="/about"
+        <!-- About -->
+        <NuxtLink to="/project-overview"
           ><button role="button" class="socialLink" id="about">
             <span class="socialIcon">←</span>
             <span>Meine Projekte</span>
           </button></NuxtLink
         >
+        <!-- Youtube -->
         <NuxtLink
           role="link"
           to="https://youtube.com/@neckXproductions"
@@ -73,6 +76,7 @@
             <span>YouTube: @neckXproductions</span>
           </button></NuxtLink
         >
+        <!-- Github -->
         <NuxtLink to="https://github.com/y-neck" target="_blank">
           <button role="button" class="socialLink" id="github">
             <svg
@@ -95,6 +99,7 @@
             <span>GitHub: @y-neck</span>
           </button></NuxtLink
         >
+        <!-- LinkedIn -->
         <NuxtLink to="https://www.linkedin.com/in/yannick-s" target="_blank">
           <button role="button" class="socialLink" id="linkedin">
             <svg
@@ -118,9 +123,10 @@
                 ></path>
               </g>
             </svg>
-            <span>LinkedIn: in/yannick-s</span>
+            <span>LinkedIn: /in/yannick-s</span>
           </button></NuxtLink
         >
+        <!-- Instagram -->
         <NuxtLink to="https://instagram.com/neckxproductions" target="_blank">
           <button role="button" class="socialLink" id="instagram">
             <svg
@@ -144,6 +150,7 @@
             <span>Instagram: @neckXproductions</span>
           </button>
         </NuxtLink>
+        <!-- Digezz -->
         <NuxtLink
           to="https://www.digezz.ch/author/yannick-spriessler/"
           target="_blank"
@@ -157,6 +164,7 @@
             <span>Digezz</span>
           </button></NuxtLink
         >
+        <!-- Sektor22 -->
         <NuxtLink to="https://sektor22.ch/" target="_blank">
           <button role="button" class="socialLink" id="sektor22">
             <span class="socialIcon"
@@ -167,8 +175,18 @@
             <span>Sektor22</span>
           </button></NuxtLink
         >
+        <!-- Studentfilm.ch -->
+        <NuxtLink to="https://studentfilm.ch/profile/yannick-spriessler" target="_blank">
+          <button role="button" class="socialLink" id="sektor22">
+            <span class="socialIcon"
+              ><img
+                src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://studentfilm.ch/profile/yannick-spriessler&size=128"
+                alt="sektor22-icon"
+            /></span>
+            <span>studentfilm.ch</span>
+          </button></NuxtLink
+        >
       </section>
-
       <Footer />
     </div>
   </div>
